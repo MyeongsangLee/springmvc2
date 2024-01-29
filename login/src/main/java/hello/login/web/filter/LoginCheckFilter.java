@@ -43,6 +43,8 @@ public class LoginCheckFilter implements Filter {
 
     private boolean isLoginCheckPath(String requestURI) {
 
+//        return !PatternMatchUtils.simpleMatch(whitelist, requestURI);
+
         for (String url: whitelist) {
             if (url.equals(requestURI)) {
                 return false;
